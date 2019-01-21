@@ -1,0 +1,49 @@
+package info.practice.cci.linkedlist;
+
+import java.util.Stack;
+
+public class Test {
+	
+	public static void main(String[] args) {
+		
+//		int[] inputArray = {2,6,1,8,4,9,7};
+//		Node node = new Node();
+//		for(int i=0;i<inputArray.length;i++) {
+//			node.addNode(inputArray[i]);
+//		}
+//		
+//		node.print(node.getHead());
+		
+		String[] values = new String[2];
+		values[0] = "{}{}[]()";
+		values[1] = "[][[]][[]]";
+		
+		Stack<String> stack = new Stack<String>();
+        for(int i=0;i<values.length;i++){
+            String temp = values[i];
+            for(int i=0;i<values.length;i++){
+            if(temp.equals("{") || temp.equals("(") || temp.equals("[")){
+                stack.push(temp);
+            }else{
+                if(!stack.empty()){
+                    stack.pop();
+                }
+            }
+            }
+        }
+        if(stack.empty()){
+            System.out.println("YES");
+        }else{
+            System.out.println("NO");
+        }
+		
+		
+	}
+
+	private static void reverseLinkedList(Node headNode) {		
+		
+
+		
+	}
+	
+}

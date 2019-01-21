@@ -1,0 +1,11 @@
+package info.learn.design.pattern.adapter;
+
+public class CustomerAdapter extends NewCustomer implements Customer{
+	
+	private OldCustomer oldCustomer;
+	
+	public CustomerAdapter(OldCustomer oldCustomer) {
+		
+	}
+
+}

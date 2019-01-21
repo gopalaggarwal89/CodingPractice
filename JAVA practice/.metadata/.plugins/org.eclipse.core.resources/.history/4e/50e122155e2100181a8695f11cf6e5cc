@@ -1,0 +1,63 @@
+package info.practice.cci.linkedlist;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+import java.util.Stack;
+
+public class Test {
+
+	public static void main(String[] args) {
+
+		// int[] inputArray = {2,6,1,8,4,9,7};
+		// Node node = new Node();
+		// for(int i=0;i<inputArray.length;i++) {
+		// node.addNode(inputArray[i]);
+		// }
+		//
+		// node.print(node.getHead());
+
+		String str = "tea";
+		String str1 = "toe";
+
+		compareAnagram(str, str1);
+
+	}
+
+	private static void compareAnagram(String str, String str1) {
+		char[] temp = str.toCharArray();
+		Arrays.sort(temp);
+
+		char[] temp1 = str1.toCharArray();
+		Arrays.sort(temp1);
+
+		int count = 0;
+
+		int length = str.length();
+		int length1 = str1.length();
+
+		if (length != length1) {
+			System.out.println("-1");
+		}
+		List<Character> lst = new ArrayList<Character>();
+		for(int i=0;i<temp1.length;i++) {
+			lst.add(temp1[i]);
+		}
+		
+		for (int i = 0; i < length; i++) {
+			if (!lst.contains(temp[i])) {
+				count++;
+			}
+		}
+
+		if (count == length) {
+			System.out.println("-1");
+		} else {
+			System.out.println(count);
+		}
+	}
+
+}

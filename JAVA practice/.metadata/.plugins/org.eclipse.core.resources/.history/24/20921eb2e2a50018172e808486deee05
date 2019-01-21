@@ -1,0 +1,15 @@
+package info.learn;
+
+import java.math.BigInteger;
+
+public class Test {
+	
+public static void main(String[] args) {
+
+	char ch = '3';
+	
+	int x = ch - '0';
+	
+	System.out.println(x);
+	}
+}

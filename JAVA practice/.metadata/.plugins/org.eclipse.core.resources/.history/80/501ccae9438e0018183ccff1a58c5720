@@ -1,0 +1,17 @@
+package info.practice.cci.linkedlist;
+
+public class ReverseList {
+	
+	public static void main(String[] args) {
+		
+	}
+	
+	
+	private static Node reverse(Node head) {
+		return null;
+	}
+	
+	private static Node reverseAtPoint(Node head, int k) {
+		return null;
+	}
+}

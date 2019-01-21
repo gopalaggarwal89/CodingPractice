@@ -1,0 +1,20 @@
+package info.learn.general;
+
+public class ReverseString {
+	
+	public static void main(String[] args) {
+		
+		String str = "Gopal";
+		
+		
+		
+	}
+	
+	private String reversed(int startIndex, int endIndex, char[] str) {
+		
+		
+		
+		return str.toString();
+	}
+
+}

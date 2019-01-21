@@ -1,0 +1,4 @@
+1520259333018	Delete element
+1520260253448	Rename field 'node'
+1520352344783	Extract method 'check'
+1520354675264	Extract method 'compareAnagram'

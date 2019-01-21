@@ -1,0 +1,67 @@
+package info.learn.oops;
+
+public class User {
+	
+	private String name = null;
+	private int age;
+	
+	
+	public User() {
+		
+	}
+	
+	public User(String name, int age) {
+		this.name = name;
+		this.age = age;
+	}
+	
+	@Override
+	public String toString() {
+		return "User [name=" + name + ", age=" + age + "]";
+	}
+	
+	
+	
+	
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + age;
+		result = prime * result + ((name == null) ? 0 : name.hashCode());
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		
+		if(null == obj) {
+			return false;
+		}
+		
+		if(obj instanceof User) {
+			User user = (User)obj;
+			if(user.getName() != null && user.getName() == this.getName() && user.getAge() == this.getAge()) {
+				return true;
+			}
+		}
+		
+		return false;
+	}
+
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public int getAge() {
+		return age;
+	}
+	public void setAge(int age) {
+		this.age = age;
+	}
+	
+	
+
+}

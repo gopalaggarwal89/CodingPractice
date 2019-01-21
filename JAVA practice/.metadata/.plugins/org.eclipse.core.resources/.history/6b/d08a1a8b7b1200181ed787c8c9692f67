@@ -1,0 +1,44 @@
+package info.learn.linked.list;
+
+public class LinkedList {
+	
+	
+	public static void main(String[] args) {
+		Node head = null;
+		for(int i=1;i<=5;i++) {
+			addNodes(i, node);
+		}
+	}
+	
+	private static Node addNodes(int data, Node node) {
+		Node currentNode = node;
+		if(currentNode == null) {
+			currentNode = new Node();
+			currentNode.data = data;
+		}else {
+			Node tempNode = new Node();
+			tempNode.data = data;
+			currentNode.next = tempNode;
+		}
+		
+		return currentNode.next;
+	}
+	
+	private static void print(Node node) {		
+		if(null!=node) {
+			while(node.next != null) {
+				System.out.println(node.data);
+			}
+		}		
+	}
+}
+
+class Node {
+
+	int data;
+	Node next;
+
+	public Node() {
+
+	}
+}

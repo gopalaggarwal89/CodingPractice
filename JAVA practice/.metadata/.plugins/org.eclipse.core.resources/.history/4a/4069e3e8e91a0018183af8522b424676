@@ -1,0 +1,17 @@
+package info.learn.algo;
+
+public class SumOfTwoValues {
+	
+	/**
+	 * Input array
+	 * Output must return sum of two
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		
+		
+		
+	}
+	
+
+}

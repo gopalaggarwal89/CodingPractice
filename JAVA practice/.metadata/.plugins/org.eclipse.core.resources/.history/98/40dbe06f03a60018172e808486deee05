@@ -1,0 +1,19 @@
+package info.learn;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class Test {
+	
+public static void main(String[] args) {
+
+	Map<String,String> map = new HashMap<String,String>();
+	int hashCode = "a1".hashCode();
+	System.out.println("hashcode "+hashCode + " expected bucket "+(hashCode % 16));
+	
+	
+	map.put("a1", "1");
+	map.put("a2", "2");
+	
+	}
+}

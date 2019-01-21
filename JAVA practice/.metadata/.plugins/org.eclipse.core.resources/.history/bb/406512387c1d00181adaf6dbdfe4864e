@@ -1,0 +1,9 @@
+package info.learn.design.pattern.adapter;
+
+public class OldCustomer {
+	
+	private String name;
+	private String age;
+	private String address;
+
+}

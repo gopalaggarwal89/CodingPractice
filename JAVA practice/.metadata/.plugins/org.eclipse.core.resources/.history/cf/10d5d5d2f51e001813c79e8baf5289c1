@@ -1,0 +1,108 @@
+package info.learn.general;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.List;
+
+public class PatternWithStartHash {
+
+	/**
+	 * Input = 3
+	 * Output = *##
+	 * 			#**
+	 * 			*##
+	 * 
+	 * Input = 5
+	 * Output = *####
+	 * 			###**
+	 * 			***##
+	 * 			###**
+	 * 			*####			
+	 * 
+	 * Input = 4
+	 * Output = *###
+	 * 			##**
+	 * 			**##
+	 * 			##**
+	 * 
+	 * @param args
+	 * @throws InterruptedException
+	 */
+	public static void main(String[] args) throws InterruptedException {
+		List<String> inputByLine = new ArrayList<String>();
+		try {
+			// Get the object of DataInputStream
+			InputStreamReader isr = new InputStreamReader(System.in, "UTF-8");
+			BufferedReader br = new BufferedReader(isr);
+			int input = Integer.valueOf(br.readLine());
+			int count = input / 2;
+			boolean isEven = true;
+			if (input % 2 != 0) {
+				isEven = false;
+				count++;
+			}
+			
+			//It will print pattern staring from * and till count
+			for (int i = 1; i <= count; i++) {
+				if (i % 2 == 0) {
+					inputByLine.add(getHashPattern(i, input));
+				} else {
+					inputByLine.add(getStarPattern(i, input));
+				}
+			}
+
+			//Next pattern must be printed after length - count
+			//e.g: Input = 5 and count = 3 (As 5 is not even)
+			//	   then count in next loop must start from 2
+			count = input - count;
+
+			if (input != 1)
+				for (int i = count; i >= 1; i--) {
+					//If input is even number then, next set of lines must start from *
+					//Else if input in not even then, next set of lines must start from #
+					if (i % 2 != 0 && isEven) {
+						inputByLine.add(getHashPattern(i, input));
+					} else if (i % 2 == 0 && !isEven) {
+						inputByLine.add(getHashPattern(i, input));
+					} else {
+						inputByLine.add(getStarPattern(i, input));
+					}
+				}
+
+			for (String str : inputByLine) {
+				System.out.println(str);
+			}
+
+			isr.close();
+		} catch (IOException ioe) {
+			ioe.printStackTrace();
+		}
+	}
+
+	private static String getStarPattern(int count, int length) {
+		StringBuilder builder = new StringBuilder();
+		for (int i = 0; i < length; i++) {
+			if (i < count) {
+				builder.append("*");
+			} else {
+				builder.append("#");
+			}
+		}
+		return builder.toString();
+	}
+
+	private static String getHashPattern(int count, int length) {
+		StringBuilder builder = new StringBuilder();
+		int hashCount = length - count;
+		for (int i = 0; i < length; i++) {
+			if (i < hashCount) {
+				builder.append("#");
+			} else {
+				builder.append("*");
+			}
+		}
+		return builder.toString();
+	}
+}

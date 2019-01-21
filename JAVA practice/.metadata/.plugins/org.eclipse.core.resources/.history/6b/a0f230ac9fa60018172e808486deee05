@@ -1,0 +1,12 @@
+package info.learn.oops;
+
+public class A extends ImmutableClass{
+
+	public A() {
+		super();
+	}
+	
+	String s = "A";
+	
+	
+}

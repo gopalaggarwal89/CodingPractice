@@ -1,0 +1,75 @@
+package info.learn.linked.list;
+
+public class NormalLinkedList {
+	private static Node head = null;
+
+	public static void main(String[] args) {
+		for (int i = 1; i <= 5; i++) {
+			addNode(i);
+		}
+
+		deleteNode(2);
+
+		print();
+		
+//		reverse();
+		
+//		print();
+	}
+
+	private static void addNode(int data) {
+		Node currentNode = new Node(data);
+		if (head == null) {
+			head = currentNode;
+		} else {
+			Node node = head;
+			while (node.next != null) {
+				node = node.next;
+			}
+			node.next = currentNode;
+		}
+	}
+
+	private static void deleteNode(int data) {
+		if (head == null)
+			return;
+
+		Node tempNode = head;
+		if (tempNode.data.equals(data)) {
+			head = tempNode.next;
+		} else {
+			Node prev = null;
+			while (tempNode != null && !tempNode.data.equals(data)) {
+				prev = tempNode;
+				tempNode = tempNode.next;
+			}
+
+			if (null != tempNode)
+				prev.next = tempNode.next;
+		}
+	}
+
+	private static void print() {
+		Node temp = head;
+		while (temp != null) {
+			System.out.println(temp.data);
+			temp = temp.next;
+		}
+	}
+	
+	private static void reverse() {
+		Node prev = null;
+		Node current = head;
+		Node next = null;
+		while(current != null) {
+			
+			next = current.next;
+			current.next = prev;
+			prev = current;
+			current = next;
+			
+		}
+		
+		head = prev;
+	}
+}

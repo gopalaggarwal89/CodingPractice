@@ -1,0 +1,40 @@
+package info.learn.sorting;
+
+public class MergeSort {
+
+	public static void main(String[] args) {
+		int arr[] = { 12, 11, 13, 5, 6, 7 };
+		printArray(arr);
+		sort(arr, 0, arr.length - 1);
+	}
+
+	private static void sort(int[] arr, int startIndex, int endIndex) {
+
+		if (startIndex < endIndex) {
+
+			int mid = (startIndex + endIndex) / 2;
+
+			sort(arr, startIndex, mid);
+			sort(arr, mid + 1, endIndex);
+
+			merge(arr, startIndex, mid, endIndex);
+		}
+
+	}
+
+	private static void merge(int[] arr, int startIndex, int mid, int endIndex) {
+		
+		//Size of two sub arrays
+		int n1 = m - l + 1;
+        int n2 = r - m;
+		
+	}
+
+	private static void printArray(int arr[]) {
+		int n = arr.length;
+		for (int i = 0; i < n; ++i)
+			System.out.print(arr[i] + " ");
+		System.out.println();
+	}
+
+}

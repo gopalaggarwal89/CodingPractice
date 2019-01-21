@@ -1,0 +1,51 @@
+package info.learn.general;
+
+public class ReverseString {
+	
+	public static void main(String[] args) {
+		
+		String str = "parijat";
+		int startIndex = 0;
+		int endIndex = str.length() - 1;
+		char[] data = str.toCharArray();
+		while(startIndex <= endIndex) {
+			char temp = data[startIndex];
+			data[startIndex] = data[endIndex];
+			data[endIndex] = temp;
+			startIndex ++;
+			endIndex --;		
+		}
+		
+		
+//		System.out.println(String.valueOf(data));
+//
+//		System.out.println(str);
+		//System.out.println(reversed(0, endIndex, "gopal"));
+		
+		//printReverse(str);
+		System.out.println(reverseByPari(str));
+		
+	}
+	
+	private static String reversed(int startIndex, int endIndex, String str) {
+		
+		char[] temp = str.toCharArray();
+		
+		if(startIndex < endIndex) {
+			char data = temp[startIndex];
+			temp[startIndex] = temp[endIndex];
+			temp[endIndex] = data;
+			return reversed(startIndex+1, endIndex-1, String.copyValueOf(temp));
+		}
+		return String.copyValueOf(temp);
+	}
+	
+	private static String reverseByPari(String str) {
+		
+		if(str.length() == 1)
+			return str;
+		
+		return str.charAt(str.length() - 1) + reverseByPari(str.substring(0,str.length() - 1));
+		
+	}
+}

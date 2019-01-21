@@ -1,0 +1,13 @@
+package info.learn.comparison;
+
+import java.util.Comparator;
+
+public class UserComparator implements Comparator<UserComparator>{
+
+	@Override
+	public int compare(UserComparator o1, UserComparator o2) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

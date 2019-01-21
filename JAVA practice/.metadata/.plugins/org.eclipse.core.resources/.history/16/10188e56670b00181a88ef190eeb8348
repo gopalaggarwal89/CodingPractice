@@ -1,0 +1,9 @@
+package info.learn.comparison;
+
+public class Test {
+	
+	public static void main(String[] args) {
+		
+	}
+
+}

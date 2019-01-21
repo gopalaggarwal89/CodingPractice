@@ -1,0 +1,22 @@
+package info.learn.comparison;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+
+public class Test {
+	
+	public static void main(String[] args) {
+		List<UserComparable> list = new ArrayList<UserComparable>(
+				Arrays.asList(
+						new UserComparable(25,"Gopal"),
+						new UserComparable(30,"Rohit"),
+						new UserComparable(27,"Vikas")));
+		Collections.sort(list);
+		for(UserComparable data : list) {
+			System.out.println(data.getAge() + " : "+data.getName());
+		}
+	}
+
+}

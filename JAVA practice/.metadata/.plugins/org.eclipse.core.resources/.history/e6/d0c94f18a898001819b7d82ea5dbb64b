@@ -1,0 +1,24 @@
+package info.learn;
+
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import info.learn.oops.*;
+
+public class Test {
+
+
+	
+public static void main(String[] args) {
+
+	Test t1 = new Test();
+	
+	Map m = new HashMap();
+	
+	
+	}
+
+}

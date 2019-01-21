@@ -1,0 +1,28 @@
+package info.learn.linked.list;
+
+public class LinkedList {
+	
+	
+	public static void main(String[] args) {
+		
+		
+		
+	}
+	
+
+	class Node {
+
+		int data;
+		Node next;
+
+		public Node() {
+
+		}
+
+		public Node(int data, Node node) {
+			this.data = data;
+			this.next = node;
+		}
+	}
+
+}

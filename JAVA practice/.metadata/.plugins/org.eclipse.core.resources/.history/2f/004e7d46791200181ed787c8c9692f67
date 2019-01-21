@@ -1,0 +1,19 @@
+package info.learn.linked.list;
+
+public class LinkedList {
+	
+	
+
+	
+class Node{
+
+	int data;
+	Node next;
+	
+	public Node() {
+		
+	}
+
+}
+	
+}

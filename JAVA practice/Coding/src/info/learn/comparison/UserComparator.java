@@ -1,0 +1,40 @@
+package info.learn.comparison;
+
+import java.util.Comparator;
+
+public class UserComparator implements Comparator<UserComparator>{
+	
+	int age;
+	String name = null;
+	
+	public UserComparator() {
+		
+	}
+	
+	public UserComparator(int age, String name) {
+		this.age = age;
+		this.name = name;
+	}
+
+	public int getAge() {
+		return age;
+	}
+
+	public void setAge(int age) {
+		this.age = age;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	@Override
+	public int compare(UserComparator o1, UserComparator o2) {
+		return o1.name.compareTo(o2.getName());
+	}
+
+}

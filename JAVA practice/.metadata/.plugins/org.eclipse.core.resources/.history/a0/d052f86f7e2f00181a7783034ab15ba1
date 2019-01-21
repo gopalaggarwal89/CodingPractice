@@ -1,0 +1,5 @@
+package info.learn.multithreading;
+
+public class CreateDeadlock {
+
+}

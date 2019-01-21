@@ -1,0 +1,8 @@
+package info.learn.oops;
+
+public class A extends ImmutableClass{
+
+	String s = "A";
+	
+	
+}

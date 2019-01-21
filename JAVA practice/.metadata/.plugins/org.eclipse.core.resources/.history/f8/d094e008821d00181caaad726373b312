@@ -1,0 +1,87 @@
+package info.learn.multithreading;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class ProducerConsumerClient {
+
+	public static void main(String[] args) {
+
+		PCHelper helper = new PCHelper();
+
+		Thread t1 = new Thread(new Runnable() {
+
+			@Override
+			public void run() {
+				try {
+					for (int i = 0; i < 5; i++)
+						helper.produce();
+
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+
+			}
+		});
+
+		Thread t2 = new Thread(new Runnable() {
+
+			@Override
+			public void run() {
+				try {
+					for (int i = 0; i < 5; i++)
+						helper.consume();
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
+
+		});
+
+		t1.start();
+		t2.start();
+
+		try {
+			t1.join();
+			t2.join();
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
+}
+
+class PCHelper {
+
+	int capacity = 2;
+
+	public PCHelper() {
+
+	}
+
+	List<Integer> lst = new ArrayList<Integer>();
+
+	synchronized void consume() throws InterruptedException {
+		
+		while (lst.size() == 0)
+			wait();
+		int length = lst.size();
+		System.out.println("Consumed : " + lst.remove(length - 1));
+		notify();
+	}
+
+	synchronized void produce() throws InterruptedException {
+		int value = 0;
+		while (lst.size() == capacity)
+			wait();
+		int i = ++value;
+		System.out.println("Producer " + i);
+		lst.add(i);
+
+		notify();
+	}
+
+}

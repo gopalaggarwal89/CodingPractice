@@ -1,0 +1,25 @@
+package info.learn.general;
+
+public class ReverseString {
+	
+	public static void main(String[] args) {
+		
+		String str = "Gopal";
+		
+		
+		
+	}
+	
+	private String reversed(int startIndex, int endIndex, String str) {
+		
+		char[] temp = str.toCharArray();
+		
+		if(startIndex == endIndex || startIndex > endIndex) {
+			return temp.toString();
+		}
+		
+		reversed(startIndex+1, endIndex-1, temp.toString());
+		
+		return temp.toString();
+	}
+}

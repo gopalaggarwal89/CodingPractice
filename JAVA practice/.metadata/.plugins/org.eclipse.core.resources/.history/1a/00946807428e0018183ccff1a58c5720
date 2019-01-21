@@ -1,0 +1,12 @@
+package info.practice.cci.linkedlist;
+
+public class DeleteAlternateNodes {
+	
+	
+	public static void main(String[] args) {
+		
+		
+		
+	}
+
+}

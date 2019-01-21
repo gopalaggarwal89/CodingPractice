@@ -1,0 +1,20 @@
+package info.practice.cci.tree;
+
+public class SimpleTreeInsertion {
+	
+	Node root =null;
+	
+	public static void main(String[] args) {
+		int[] arr = {1,2,3,4};
+		
+		root = new Node(arr[0]);
+		
+		for(int i=1;i<arr.length;i++) {
+			
+		}
+	}
+	
+	private static void addNode(int data) {
+		
+	}
+}

@@ -1,0 +1,10 @@
+package info.practice.cci.linkedlist;
+
+public class ReverseList {
+	
+	public static void main(String[] args) {
+	
+		
+		
+	}
+}

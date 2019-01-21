@@ -1,0 +1,10 @@
+package info.practice.cci.tree;
+
+public class SimpleTreeInsertion {
+	
+	public static void main(String[] args) {
+		int[] arr = {1,2,3,4};
+		
+		Node root = new Node(arr[0]);
+	}
+}

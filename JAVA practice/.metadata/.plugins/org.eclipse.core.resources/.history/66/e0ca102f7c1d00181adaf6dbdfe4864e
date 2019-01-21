@@ -1,0 +1,5 @@
+package info.learn.design.pattern.adapter;
+
+public class OldCustomer {
+
+}
