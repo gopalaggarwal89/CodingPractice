@@ -15,7 +15,7 @@ public class SumOfTwoValues {
 	public static void main(String[] args) {
 
 		int[] array = {7,6,12,3,9,3,5,1};
-	List<Integer> list = new ArrayList<Integer>();
+		List<Integer> list = new ArrayList<Integer>();
         for(int i=0;i<array.length;i++){
             list.add(array[i]);
         }

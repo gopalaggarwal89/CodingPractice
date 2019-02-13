@@ -26,7 +26,6 @@ public class AddStringNumbers {
 		}
 		char[] a1 = input1.toCharArray();
 		char[] a2 = input2.toCharArray();
-
 		StringBuilder sum = new StringBuilder();
 		int carry = 0;
 		for (int i = length - 1; i >= 0; i--) {
