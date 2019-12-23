@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename type &apos;info.learn.HackerRank&apos; to &apos;IfAny&apos;&#x0D;&#x0A;- Original project: &apos;Coding&apos;&#x0D;&#x0A;- Original element: &apos;info.learn.HackerRank&apos;&#x0D;&#x0A;- Renamed element: &apos;info.learn.IfAny&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;HackerRank&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;info.learn{HackerRank.java[HackerRank" matchStrategy="1" name="IfAny" qualified="false" references="true" similarDeclarations="false" stamp="1521277818291" textual="false" version="1.0"/>
-</session>

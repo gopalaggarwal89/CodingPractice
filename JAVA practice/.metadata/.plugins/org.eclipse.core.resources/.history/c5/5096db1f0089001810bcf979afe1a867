@@ -1,7 +1,0 @@
-package info.practice.cci.tree;
-
-public class SimpleTreeInsertion {
-	
-	int[] arr = {1,2,3,4}
-
-}

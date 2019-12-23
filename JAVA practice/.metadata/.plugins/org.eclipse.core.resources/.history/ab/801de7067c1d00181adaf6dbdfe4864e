@@ -1,7 +1,0 @@
-package info.learn.design.pattern.adapter;
-
-public interface Customer {
-
-	
-	
-}

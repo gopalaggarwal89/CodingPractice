@@ -1,6 +1,0 @@
-package info.learn.oops;
-
-public abstract class Abstraction implements Sample{
-	
-	public void display();
-}
