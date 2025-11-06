@@ -8,7 +8,7 @@ public class DeadlockImplementor implements Runnable {
 		Thread t = new Thread(new DeadlockImplementor());
 		t.start();
 		t.join();
-		System.out.println("Test");
+		System.out.println("MatrixMazeProblem");
 	}
 
 	@Override

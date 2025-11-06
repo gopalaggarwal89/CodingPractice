@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { StoreModule } from '@ngrx/store';
 import { ReadComponent } from './read/read.component';
 import { CreateComponent } from './create/create.component';
-import { tutorialReducer } from './reducers/tutorial.reducer';
+import { tutorialReducer } from './store/tutorial.reducer';
 
 @NgModule({
   declarations: [

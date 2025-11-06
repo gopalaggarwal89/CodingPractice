@@ -4,7 +4,7 @@ import { Tutorial } from './../models/tutorial.model';
 import { AppState } from './../app.state';
 import { Observable } from 'rxjs';
 // Import our actions at the top
-import * as TutorialActions from './../actions/tutorial.actions';
+import * as TutorialActions from '../store/tutorial.actions';
 
 
 @Component({

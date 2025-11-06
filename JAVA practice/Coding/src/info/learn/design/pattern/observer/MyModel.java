@@ -11,12 +11,15 @@ public class MyModel {
 	public List<Observer> getObserver() {
 		return observer;
 	}
+
 	public void setObserver(List<Observer> observer) {
 		this.observer = observer;
 	}
+
 	public int getTemp() {
 		return temp;
 	}
+
 	public void setTemp(int temp) {
 		this.temp = temp;
 		notifyObservers();

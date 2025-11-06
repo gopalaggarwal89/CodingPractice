@@ -13,10 +13,6 @@ public class OddEven{
 
 class TaskEven implements Runnable{
 	private Printer printer;
-	
-	public TaskEven() {
-		
-	}
 
 	public TaskEven(Printer printer) {		
 		this.printer = printer;
@@ -37,10 +33,6 @@ class TaskOdd implements Runnable{
 	
 	public TaskOdd(Printer printer) {
 		this.printer = printer;
-	}
-	
-	public TaskOdd() {
-		
 	}
 
 	@Override

@@ -8,13 +8,14 @@ public class NormalLinkedList {
 			addNode(i);
 		}
 
-		deleteNode(2);
+//		deleteNode(2);
 
+		System.out.println("After delete");
 		print();
 		
-//		reverse();
-		
-//		print();
+		reverse();
+		System.out.println("After reverse ");
+		print();
 	}
 
 	private static void addNode(int data) {

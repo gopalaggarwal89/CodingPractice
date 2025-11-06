@@ -7,7 +7,7 @@ public class ReverseString {
 	
 	public static void main(String[] args) {
 		
-		String str = "parijat";
+		String str = "manikant";
 		
 		
 		System.out.println(reverseWithIteration(str));
@@ -29,13 +29,14 @@ public class ReverseString {
 		
 		return String.valueOf(data);
 	}
-	
-	private static String reverseByPari(String str) {
-		
-		if(str.length() == 1)
+
+	private static String reverseByPari(String str)
+	{
+
+		if (str.length() == 1)
 			return str;
-		
-		return str.charAt(str.length() - 1) + reverseByPari(str.substring(0,str.length() - 1));
-		
+
+		return str.charAt(str.length() - 1) + reverseByPari(str.substring(0, str.length() - 1));
+
 	}
 }

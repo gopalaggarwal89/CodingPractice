@@ -14,7 +14,7 @@ public class SortMapWithValues {
 	public static void main(String[] args) {
 		
 		Map<String,String> map = new HashMap<String,String>();
-		map.put("1", "GOPAL");
+		map.put("1", "John");
 		map.put("2", "ABHISHEK");
 		map.put("3", "ABHISHEK");
 		map.put("4", "ROHIT");
